@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-deployment
+spec:
+  replicas: 4
+
+  selector:
+    matchLabels:
+      app: k8s-app
+
+  template:
+    metadata:
+      labels:
+        app: k8s-app
+
+    spec:
+      containers:
+      - name: k8s-app
+        image: nasir590/k8s-app:v1   # initial image (pipeline will update)
+        ports:
+        - containerPort: 80
+
