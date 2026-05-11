@@ -11,7 +11,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/nasiroddin-qatib/cicdwithk8s'
+                git 'https://github.com/nasiroddin-khatib/cicdwithk8s'
             }
         }
 
